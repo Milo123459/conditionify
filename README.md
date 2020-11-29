@@ -10,7 +10,6 @@ const condition: Condition = new Condition(
 	[true, () => console.log(true), () => console.log('Hello from Conditionify!')],
 	[{ returns: true, defaultFn: console.log }]
 );
-condition.go();
 ```
 
 Expected output:
