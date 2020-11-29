@@ -7,7 +7,7 @@ Example in TypeScript
 ```ts
 import { Condition } from 'conditionify';
 const condition: Condition = new Condition(
-	[true, () => true, () => console.log('Hello from Conditionify!')],
+	[true, () => console.log(true), () => console.log('Hello from Conditionify!')],
 	[{ returns: true, defaultFn: console.log }]
 );
 condition.go();
