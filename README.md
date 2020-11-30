@@ -2,7 +2,9 @@
 
 Fast and easy way to create conditional functions
 
-Example in TypeScript
+# Examples
+
+Run functions that return true, or get a value on run the defaultFn
 
 ```ts
 import { Condition } from 'conditionify';
@@ -14,7 +16,25 @@ const condition: Condition = new Condition(
 
 Expected output:
 
-```js
-true;
-true;
+```
+true
+true
+```
+
+Log anything that isn't a function, and also run the functions
+
+```ts
+import { Condition } from 'conditionify';
+const condition: Condition = new Condition(
+	[false, () => console.log(true), () => console.log('Hello from Conditionify!')],
+	[{ returns: '*', defaultFn: console.log }]
+);
+```
+
+Expected output:
+
+```
+false
+true
+Hello from Condiitionify!
 ```
